@@ -16,12 +16,22 @@ for i in range(1, 11):
     while True:
         try:
             tugas = float(input("Nilai Tugas    : "))
+            if not (0 <= tugas <= 100):
+                print("Nilai Tugas harus antara 0 - 100!\n")
+                continue
+
             uts = float(input("Nilai UTS      : "))
+            if not (0 <= uts <= 100):
+                print("Nilai UTS harus antara 0 - 100!\n")
+                continue
+
             uas = float(input("Nilai UAS      : "))
-            if all(0 <= n <= 100 for n in [tugas, uts, uas]):
-                break
-            else:
-                print("Nilai harus antara 0 - 100!\n")
+            if not (0 <= uas <= 100):
+                print("Nilai UAS harus antara 0 - 100!\n")
+                continue
+
+            break
+
         except ValueError:
             print("Input harus berupa angka!\n")
 
@@ -55,7 +65,7 @@ for i in range(1, 11):
         "Status": status,
     })
 
-# ── Rekap teks ──────────────────────────────────────────
+# ── Rekap tabel ─────────────────────────────────────────
 print("\n" + "=" * 55)
 print("         REKAP NILAI MAHASISWA")
 print("=" * 55)
@@ -112,8 +122,7 @@ ax1.set_xticklabels(nama_list, rotation=15, ha="right")
 ax1.set_ylabel("Nilai")
 ax1.set_ylim(0, 110)
 ax1.legend()
-ax1.axhline(y=60, color="red", linestyle="--",
-            linewidth=0.8, label="Batas lulus")
+ax1.axhline(y=60, color="red", linestyle="--", linewidth=0.8)
 
 # -- Grafik 2: Rata-rata + highlight min & max --
 ax2 = axes[1]
