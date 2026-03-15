@@ -146,12 +146,19 @@ program_nilai.py
 
 ## 4 Hasil Eksekusi per Bagian
 
-### Grafik 1 — Placeholder
+### Input Nilai Mahasiswa
 
-![Grafik Nilai per Komponen](images/grafik_komponen.png)
+![Bagian awal input nilai](images/input_nilai.png)
+![Bagian akhir input nilai](images/end_nilai.png)
 
+### Input Nilai Mahasiswa
 
+![Bagian awal input nilai](images/rekap_nilai.png)
+![Bagian akhir input nilai](images/end_rekap.png)
 
+### Grafik Nilai
+
+![Bagian awal input nilai](images/grafik_nilai.png)
 
 ---
 
