@@ -7,7 +7,7 @@ print("=" * 55)
 
 mahasiswa_list = []
 
-for i in range(1, 4):
+for i in range(1, 11):
     print(f"\nData Mahasiswa ke-{i}")
     print()
     nama = input("Nama Mahasiswa : ")
