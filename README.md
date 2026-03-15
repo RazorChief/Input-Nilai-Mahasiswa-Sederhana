@@ -1,63 +1,6 @@
 # Program Nilai & Predikat Mahasiswa
 
-Program Python untuk menginput, memproses, dan memvisualisasikan nilai mahasiswa secara interaktif menggunakan `matplotlib`.
-
----
-
-## Daftar Isi
-
-- [Cara Menjalankan](#cara-menjalankan)
-- [Penjelasan Konsep Array](#1-penjelasan-konsep-array)
-- [Analisis Kompleksitas](#2-analisis-kompleksitas)
-- [Refleksi Pembelajaran](#3-refleksi-pembelajaran)
-
----
-
-## Cara Menjalankan
-
-### Prasyarat
-
-Pastikan Python dan library berikut sudah terinstal:
-
-```bash
-pip install matplotlib numpy
-```
-
-### Menjalankan Program
-
-```bash
-python program_nilai.py
-```
-
-Program akan meminta input data untuk setiap mahasiswa secara berurutan:
-
-```
-Data Mahasiswa ke-1
-
-Nama Mahasiswa :
-NIM            :
-Nilai Tugas    :
-Nilai UTS      :
-Nilai UAS      :
-```
-
-### Output yang Dihasilkan
-
-- Tabel rekap nilai di terminal
-- Ringkasan nilai tertinggi, terendah, dan data kelulusan
-- Tiga grafik visualisasi yang otomatis tersimpan sebagai `grafik_nilai.png`
-
-### Tampilan Input di Terminal
-
-> 📸 *Letakkan screenshot tampilan input terminal di sini*
-
-![Tampilan Input Terminal](images/input_terminal.png)
-
-### Tampilan Rekap Tabel di Terminal
-
-> 📸 *Letakkan screenshot tampilan tabel rekap nilai di sini*
-
-![Tampilan Rekap Tabel](images/rekap_tabel.png)
+Program Python untuk menginput, memproses, dan memvisualisasikan nilai mahasiswa secara interaktif
 
 ---
 
@@ -98,9 +41,16 @@ rata_list  = [mhs["Rata-rata"] for mhs in mahasiswa_list]
 tugas_list = [mhs["Tugas"]     for mhs in mahasiswa_list]
 uts_list   = [mhs["UTS"]       for mhs in mahasiswa_list]
 uas_list   = [mhs["UAS"]       for mhs in mahasiswa_list]
+
+nilai_max = max(rata_list)
+nilai_min = min(rata_list)
+nama_max = nama_list[rata_list.index(nilai_max)]
+nama_min = nama_list[rata_list.index(nilai_min)]
+jumlah_lulus = status_list.count("LULUS")
+jumlah_tidak = status_list.count("TIDAK LULUS")
 ```
 
-Teknik ini menghasilkan array satu dimensi yang siap dikonsumsi oleh `matplotlib` tanpa perlu loop manual.
+Teknik ini menghasilkan array satu dimensi yang siap dijalankan oleh `matplotlib` tanpa perlu loop manual.
 
 ### Operasi Array yang Digunakan
 
@@ -194,31 +144,14 @@ program_nilai.py
 
 ---
 
-## Hasil Visualisasi Grafik
+## 4 Hasil Eksekusi per Bagian
 
-### Grafik 1 — Nilai per Komponen
-
-> 📸 *Letakkan screenshot grafik nilai per komponen (grouped bar) di sini*
+### Grafik 1 — Placeholder
 
 ![Grafik Nilai per Komponen](images/grafik_komponen.png)
 
-### Grafik 2 — Rata-rata Nilai (Min & Max)
 
-> 📸 *Letakkan screenshot grafik rata-rata dengan highlight min & max di sini*
 
-![Grafik Rata-rata Nilai](images/grafik_rata_rata.png)
-
-### Grafik 3 — Data Kelulusan
-
-> 📸 *Letakkan screenshot pie chart data kelulusan di sini*
-
-![Grafik Data Kelulusan](images/grafik_kelulusan.png)
-
-### Tampilan Lengkap Semua Grafik
-
-> 📸 *Letakkan screenshot keseluruhan tampilan grafik (`grafik_nilai.png`) di sini*
-
-![Grafik Lengkap](grafik_nilai.png)
 
 ---
 
