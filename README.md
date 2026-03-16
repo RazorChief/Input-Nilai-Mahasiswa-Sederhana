@@ -151,7 +151,7 @@ program_nilai.py
 ![Bagian awal input nilai](images/input_nilai.png)
 ![Bagian akhir input nilai](images/end_nilai.png)
 
-### Input Nilai Mahasiswa
+### Rekap Nilai Mahasiswa
 
 ![Bagian awal input nilai](images/rekap_nilai.png)
 ![Bagian akhir input nilai](images/end_rekap.png)
